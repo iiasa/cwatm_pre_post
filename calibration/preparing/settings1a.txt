@@ -1,0 +1,68 @@
+[DEFAULT]
+Root = P:/watmodel/CWATM/calibration/multi_calibration/multicalibration/cwatm_pre_post/calibration/preparing
+RootLinux = /p/luc/watmodel/CWATM/calibration/multi_calibration/multicalibration/cwatm_pre_post/calibration/preparing
+ForcingStart = 1/1/2000
+ForcingEnd = 31/12/2016
+timeperiod = daily
+SpinoffYears = 5
+# For the figures of validation, calibration
+WarmupDays = 0
+MinQlength = 4
+No_of_calibration_PCs = 21
+No_of_calibration_lists = 1
+MaxPercArea=0.1
+
+[CSV]
+Qgis = result/Qgis22.csv
+QgisOut = result/Qgis22.csv
+Qtss = init/Qtss.csv
+
+[Path]
+Temp = temp
+Result = result
+Templates = templates       
+SubCatchmentPath = catchments3
+ParamRanges = init/ParamRanges.csv
+CatchmentDataPath = staticdata
+
+MeteoData = P:/watmodel/CWATM/cwatm_input_1km_pinzgau/meteo
+PCRHOME = C:/PCRaster/bin
+PythonHome = python
+PythonHomeLinux = python3
+
+[MultiComputer]
+# directories with root in front
+CatchmentsToProcess = CatchmentsToProcess_All.txt
+No_of_calibration_PCs = 5
+No_of_calibration_lists = 1
+
+
+[Templates]
+ModelSettings = templates/settings.ini
+RunModel = templates/runpy.bat
+
+
+[Option]
+firstrun = True
+para_first = [0.0045,1.0, 1.0, 4.0, 0.2,  1.0,  1.0,  0.007, 3.0, 0.5, 1.0,     1.0]
+# 	     [perm  ,crop,soil,pref,arno,interF,reces,ice, CCM,lakeA,lakeEva, No]
+bestrun = True
+
+
+[DEAP]
+maximize = True
+use_multiprocessing = 1
+pool_limit = 24
+ngen = 20
+mu = 240
+lambda_ = 24
+select_best = 10
+# select best: select from each generation the best x, and produce next generation, if not given select_bast = lambda_
+start_from_gen1 = False  # to be done
+
+
+
+
+
+
+
