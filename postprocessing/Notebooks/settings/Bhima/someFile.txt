@@ -1,0 +1,64 @@
+CWATM - Community Water Model  1.4  Date:  2022/01/12 17:27  
+International Institute of Applied Systems Analysis (IIASA)
+Running under platform:  Windows
+-----------------------------------------------------------
+Resolution of meteo forcing is 12 times higher than base maps.
+
+=> ModFlow is used
+
+
+=> ModFlow timestep is :  1  days
+
+=> Topography is used as upper limit of groundwater. Correcting depth under lakes. It can make ModFlow difficulties to converge
+=> Initial water table depth is uploaded from  C:\Data\bhima_Input_mainCWatM\Modflow\modflow_inputs\modflow_watertable_totalend.nc
+=> Potential groundwater inflow from rivers is  0.05  m/day
+=> Groundwater inflow from lakes/reservoirs is  0.05  m/day
+=> Groundwater pumping should be deactivated if includeWaterDemand is False
+=> THE PUMPING MAP SHOULD BE DEFINED (In transient.py ALSO LINE 420) BEFORE TO RUN THE MODEL AND BE THE SAME FOR ALL THE SIMULATION
+=> Pumping in the ModFlow layer is prevented if water table is under  0.7  of the layer capacity
+writing simulation...
+  writing simulation name file...
+  writing simulation tdis package...
+  writing ims package ims_-1...
+  writing model TRANSIENT...
+    writing model name file...
+    writing package dis...
+    writing package ic...
+    writing package npf...
+    writing package oc...
+    writing package sto...
+    writing package rch_0...
+    writing package wel_0...
+    writing package drn_0...
+=> ModFlow-CwatM water balance is checked
+ModFlow discrepancy for each time step can be extracted from the listing file (.lst file) at the end of the simulation,
+as well as the actual pumping rate applied in ModFlow (ModFlow automatically reduces the pumping rate once the ModFlow cell is almost saturated)
+=> Soil moisture is filled at  75.0  % at the begining
+Sector- and source-specific abstraction fractions are activated
+
+CWATM Simulation Information and Setting
+The simulation output as specified in the settings file: C:\Data\bhima_Input_mainCWatM/Output can be found in settings_CWatM_Bhima_Agent.ini
+
+Step         Date   Discharge
+ 
+
+ ========================== CWATM ERROR =============================
+Error 105: C:\Data\bhima_Input_mainCWatM/Input/landcover/crops/fracCrops_IrrLandDemand[0]_monthend.nc has a different shape than area or ldd 
+
+
+in evaporation: some crops not rainfed
+
+
+ ========================== CWATM ERROR =============================
+Error 105: C:\Data\bhima_Input_mainCWatM/Input/landcover/crops/fracCrops_IrrLandDemand[1]_monthend.nc has a different shape than area or ldd 
+
+
+in evaporation: some crops not rainfed
+
+
+ ========================== CWATM ERROR =============================
+Error 105: C:\Data\bhima_Input_mainCWatM/Input/landcover/crops/fracCrops_IrrLandDemand[2]_monthend.nc has a different shape than area or ldd 
+
+
+in evaporation: some crops not rainfed
+1      01/06/2013       0.00     2      02/06/2013       0.02     3      03/06/2013    1288.35     4      04/06/2013    1434.65     5      05/06/2013     642.63     6      06/06/2013     322.96     7      07/06/2013     217.73     

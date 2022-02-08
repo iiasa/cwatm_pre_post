@@ -1,0 +1,18 @@
+CWATM - Community Water Model  1.4  Date:  2022/01/12 17:27  
+International Institute of Applied Systems Analysis (IIASA)
+Running under platform:  Windows
+-----------------------------------------------------------
+Resolution of meteo forcing is 12 times higher than base maps.
+
+=> ModFlow is used
+
+
+=> ModFlow timestep is :  1  days
+
+=> Topography is used as upper limit of groundwater. Correcting depth under lakes. It can make ModFlow difficulties to converge
+=> Initial water table depth is uploaded from  C:\Data\bhima_Input_mainCWatM\Modflow\modflow_inputs\modflow_watertable_totalend.nc
+=> Potential groundwater inflow from rivers is  0.05  m/day
+=> Groundwater inflow from lakes/reservoirs is  0.05  m/day
+=> Groundwater pumping should be deactivated if includeWaterDemand is False
+=> THE PUMPING MAP SHOULD BE DEFINED (In transient.py ALSO LINE 420) BEFORE TO RUN THE MODEL AND BE THE SAME FOR ALL THE SIMULATION
+=> Pumping in the ModFlow layer is prevented if water table is under  0.7  of the layer capacity
